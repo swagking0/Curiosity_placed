@@ -1,0 +1,2 @@
+model_checkpoint_path: "/home/swagking0/noreward-rl/models/models_me/mario_me"
+all_model_checkpoint_paths: "/home/swagking0/noreward-rl/models/models_me/mario_me"

@@ -1,0 +1,57 @@
+Contact info:
+Sunkara Mohith Bhargav
+msunkara@techfak.uni-bielefeld.de
+
+June 2018
+------------------------------------------------------------------------------------------------------------------------------------------------
+Paper:
+      Curiosity Driven Exploration by Self-Supervised Prediction
+      By
+        [Deepak Pathak] [Pulkit Agrawal] [Alexei A. Efros] [Trevor Darrell]
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Code Implementations:
+       original git repo link: https://github.com/pathak22/noreward-rl.git 
+       created git repo ISY link: https://github.com/swagking0/Curiosity_exploration.git
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Deviates from the article:
+       Summary:
+       The article totally talks about creating a reward model which provides rewards and this reward termed as "Curiosity". 
+       By, using this the agent makes self-supervised prediction and learns it environment by considering only the features 
+       of the environment which agent is effected leaving behind the features which does not effect the agent.
+       Observation:
+       This small summary of the proposed article is perfectly implemented by the author's without any deviations.
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Quality:
+      The code is clearly and formulated within files but relation between each file is not difined or sorted in correct formate. Which indirectly kills lot of time. 
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Pitfalls and Observations:
+     With training a agent for the environment Super Mario Bros. The following pitfalls and observations is seen:
+     --> As we all know that Super Mario Bros have secret underworld and this can be accessed using the some special pipes in the environment which when passed will direcly boost the palyer to far distance. In my training case the agent has experienced it more times and because of which action and state pair is also learned. As, this environment is not common the agent is falling into curiosity blackhole as it could not understand why that state/action pair at the same instance of the environment is not helping agent to attain new state.
+     --> But later when I started to continue training the agent has then learned and started to explore new states but after this training the agent never tried to get over the pipe to enter the underworld.
+     With this all this observations I would like to address that agent needs lot of runs to understand the environment and if agent is stuck in learning the environment it is directly pushed into the curiosity blackhole where the curiosity reward is no more helping the agent to explore further.
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+# environment-installation problems and solutions:
+     As, mentioned above in the "Quality Section" there is a problem in setting up VizDoom environment by using the mentioned instructions by the author's. With that in code formulation there are fews cases which are hard to understand and took time to figure out esspecially with storing of new trained model which is sloved and is commented in the inference.py file (comment : #saving with meta graph).
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+# video visualization:
+    the demo.py file which is created by the author's can be used to test traind policy when infered using inference.py. The demo.py file consist of an agrsparser() record option where an user can store his/her running trained ploicy.
+args defined as follows in demo.py:
+parser.add_argument('--record', action='store_true', help="Record the policy running video") --> this is also mentioned in README.md.
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+Note: This techinical report is purely based on the my personal observations which may change. Therefore, I would request you to use this document as reference and dig the article in deep to understand the essence and importance of proposed model. If still any problems or help needed the above mentioned contact details can be used.
+---------------------------------------------------------------xxx------------------------------------------------------------------------------
+---------------------------------------------------------------xxx------------------------------------------------------------------------------
